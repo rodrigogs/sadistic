@@ -1,0 +1,27 @@
+{
+  "name": "sadistic",
+  "description": "",
+  "version": "0.0.0",
+  "private": false,
+  "main": "index.js",
+  "bin": {
+    "sadistic": "bin/sadistic"
+  },
+  "scripts": {
+    "eslint": "eslint . --ext .js",
+    "eslint:fix": "npm run eslint -- --fix"
+  },
+  "dependencies": {
+    "got": "^9.3.2",
+    "minimist": "^1.2.0",
+    "p-queue": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "engines": {
+    "node": ">=11.2"
+  }
+}

@@ -1,0 +1,22 @@
+#!/bin/sh
+":" //# comment; exec /usr/bin/env node --experimental-worker "$0" "$@"
+
+const minimist = require('minimist');
+const sadistic = require('..');
+
+/**
+ * --url          - request url
+ * --options      - got request options
+ * --concurrency  - request concurrency
+ * --threads      - worker threads
+ */
+const argv = minimist(process.argv.slice(2));
+
+(async () => {
+  try {
+    await sadistic(argv);
+    console.log('Done!');
+  } catch (err) {
+    console.error(err);
+  }
+})();
